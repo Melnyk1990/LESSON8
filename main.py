@@ -60,3 +60,55 @@ def test(quantity_star):
         print('Enter a number less than "6"')
 
 print(test(quantity_star))
+##############################################################################################
+###########################################################################################
+
+
+print('*'*10, 'TASK 3', 10*'*')
+num1 = int(input('Enter first number: '))
+num2 = int(input('Enter second number: '))
+
+def summ_numbers(num1, num2):
+    if num1>num2:
+        return 0
+
+    return num1 + summ_numbers(num1 + 1, num2)
+
+print(summ_numbers(num1, num2))
+
+
+
+print('''#ПРИМЕРЫ:
+########################################################################
+1) Если    num1 = 0;    num2 = 5;
+
+# sum_numbers(0, 5) => 0 + sum_numbers(1, 5) =>15
+# sum_numbers(1, 5) => 1 + sum_numbers(2, 5) =>15
+# sum_numbers(2, 5) => 2 + sum_numbers(3, 5) =>14
+# sum_numbers(3, 5) => 3 + sum_numbers(4, 5) =>12
+# sum_numbers(4, 5) => 4 + sum_numbers(5, 5) =>9
+# sum_numbers(5, 5) =>5
+
+########################################################################
+2) Если    num1 = -3;    num2 = 2;
+
+# sum_numbers(-3, 2) => -3 + sum_numbers(-2, 2) =>-3
+# sum_numbers(-2, 2) => -2 + sum_numbers(-1, 2) =>0
+# sum_numbers(-1, 2) => -1 + sum_numbers(0, 2) => 2
+# sum_numbers(0, 2) => 0 + sum_numbers(1, 2) => 3
+# sum_numbers(1, 2) => 1 + sum_numbers(2, 2) => 3
+# sum_numbers(2, 2) => 2
+######################################################################
+3) Если    num1 = -1;    num2 = 6;
+
+
+# sum_numbers(-1, 6) => -1 + sum_numbers(0, 6) =>20
+# sum_numbers(0, 5) => 0 + sum_numbers(1, 5) =>21
+# sum_numbers(1, 5) => 1 + sum_numbers(2, 5) =>21
+# sum_numbers(2, 5) => 2 + sum_numbers(3, 5) =>20
+# sum_numbers(3, 5) => 3 + sum_numbers(4, 5) =>18
+# sum_numbers(4, 5) => 4 + sum_numbers(5, 5) =>15
+# sum_numbers(5, 5) => 5 + sum_numbers(6, 5) =>11
+# sum_numbers(6, 6) =>6
+######################################################################
+''')
