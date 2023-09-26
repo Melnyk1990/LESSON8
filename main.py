@@ -74,7 +74,7 @@ def summ_numbers(num1, num2):
 
     return num1 + summ_numbers(num1 + 1, num2)
 
-print(summ_numbers(num1, num2))
+print('The sum of the range is', summ_numbers(num1, num2))
 
 
 
